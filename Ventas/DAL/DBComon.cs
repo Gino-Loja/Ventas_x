@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using Microsoft.Data.SqlClient;
+using EN;
+
+namespace DAL
+{
+    public static class DBComon
+    {
+        
+        private static string Conn = @"Data Source=.;Initial Catalog=ventas;Integrated Security=True";
+
+        public static IDbConnection Conexion()
+        {
+            return new SqlConnection(Conn);
+        }
+
+        public static IDbCommand ObtenerComando(string pComando, IDbConnection pCnn)
+        {
+            return new  SqlCommand(pComando, pCnn as SqlConnection);
+        }
+    }
+}
+
+
+

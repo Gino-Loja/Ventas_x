@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfPresentacion.Consulta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPresentacion"
+        mc:Ignorable="d"
+        Title="Consulta" Height="450" Width="800">
+    <Grid>
+        <Label Content="Formulario de consula" HorizontalAlignment="Left" Margin="363,40,0,0" VerticalAlignment="Top" Height="29" Width="132" FontWeight="Bold"/>
+        <Label Content="Buscar" HorizontalAlignment="Left" Margin="157,82,0,0" VerticalAlignment="Top" Height="29" Width="61" FontWeight="Bold"/>
+        <TextBox x:Name="txtmostrar" HorizontalAlignment="Left" Margin="223,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="23"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="223,266,0,0" VerticalAlignment="Top" Height="29" Width="61" FontWeight="Bold" RenderTransformOrigin="0.628,-0.599"/>
+        <Label Content="Ventas" HorizontalAlignment="Left" Margin="223,302,0,0" VerticalAlignment="Top" Height="29" Width="61" FontWeight="Bold"/>
+        <Label Content="Estado" HorizontalAlignment="Left" Margin="223,336,0,0" VerticalAlignment="Top" Height="29" Width="61" FontWeight="Bold"/>
+        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="220,380,0,0" VerticalAlignment="Top" Height="30" Width="80" Click="btnModificar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="329,379,0,0" VerticalAlignment="Top" Height="31" Width="71" Click="btnEliminar_Click"/>
+        <Button x:Name="btnVolver" Content="Volver" HorizontalAlignment="Left" Margin="445,380,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="btnVolver_Click"/>
+        <TextBox x:Name="txtnombre" HorizontalAlignment="Left" Margin="289,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="23"/>
+        <TextBox x:Name="txtventas" HorizontalAlignment="Left" Margin="288,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="20"/>
+        <DataGrid x:Name="dgdatos" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="216,130,196,184" SelectionChanged="dgdatos_SelectionChanged" />
+        <Button x:Name="btnMostrar" Content="Mostrar" HorizontalAlignment="Left" Margin="429,88,0,0" VerticalAlignment="Top" Height="23" Width="86" Click="btnMostrar_Click"/>
+        <TextBox x:Name="txtestado" HorizontalAlignment="Left" Margin="288,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+
+    </Grid>
+</Window>
